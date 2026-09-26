@@ -1,18 +1,311 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.box {
-    width: 50px;
-    height: 50px;
-    padding: 20px;
-    margin: 5px;
-    background-color: aqua;
-}
+    <title>Karunya Mitta | Full Stack Developer</title>
 
-</style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-<div class="container">
-    <div class="box">Box 1</div>
-    <div class="box">Box 2</div>
-    <div class="box">Box 3</div>
-    <div class="box">Box 4</div>
-</div>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0b0b0f;
+            color: white;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(11, 11, 15, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        section {
+            padding: 100px 10%;
+            min-height: 100vh;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .tag {
+            color: #888;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: clamp(50px, 9vw, 110px);
+            line-height: 0.95;
+        }
+
+        .highlight {
+            color: #7c5cff;
+        }
+
+        .intro {
+            max-width: 650px;
+            color: #aaa;
+            font-size: 20px;
+            margin-top: 25px;
+        }
+
+        .buttons {
+            margin-top: 35px;
+        }
+
+        button {
+            padding: 14px 25px;
+            border: none;
+            border-radius: 30px;
+            background: #7c5cff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        .outline {
+            background: transparent;
+            border: 1px solid #444;
+        }
+
+        h2 {
+            font-size: 45px;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            max-width: 800px;
+            color: #aaa;
+            font-size: 19px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .skill {
+            padding: 12px 20px;
+            border: 1px solid #333;
+            border-radius: 30px;
+            color: #ccc;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            padding: 30px;
+            background: #121218;
+            border: 1px solid #222;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #7c5cff;
+        }
+
+        .card h3 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #888;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            border-top: 1px solid #222;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+            section {
+                padding: 100px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">KM.</div>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+        </div>
+    </nav>
+
+
+    <!-- HOME -->
+    <section id="home">
+
+        <div class="tag">FULL STACK DEVELOPER • IT STUDENT</div>
+
+        <h1>
+            Hi, I'm<br>
+            <span class="highlight">Karunya.</span>
+        </h1>
+
+        <p class="intro">
+            I build modern web applications, explore backend development,
+            and turn ideas into functional digital experiences.
+        </p>
+
+        <div class="buttons">
+            <button onclick="scrollToProjects()">
+                View Projects
+            </button>
+
+            <button class="outline" onclick="sayHello()">
+                Say Hello
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2>About Me.</h2>
+
+        <p class="about">
+            I'm an IT engineering student passionate about software development,
+            backend systems and full-stack web development. I'm currently
+            strengthening my skills in programming, databases, Git, Linux and
+            modern web technologies while building projects along the way.
+        </p>
+
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Linux</div>
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2>Projects.</h2>
+
+        <div class="projects">
+
+            <div class="card">
+                <h3>Bank Simulator</h3>
+                <p>
+                    A banking simulation project designed to practice
+                    programming logic, transactions and data handling.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Expense Tracker</h3>
+                <p>
+                    A simple application for tracking expenses and
+                    understanding personal spending patterns.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Price Comparison</h3>
+                <p>
+                    A backend-focused project exploring product prices
+                    across different shopping platforms.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        © 2026 Karunya Mitta • Built with HTML, CSS & JavaScript
+    </footer>
+
+
+    <script>
+
+        function scrollToProjects() {
+            document.getElementById("projects").scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        function sayHello() {
+            alert("Hey! Thanks for visiting my profile 👋");
+        }
+
+    </script>
+
+</body>
+</html>
